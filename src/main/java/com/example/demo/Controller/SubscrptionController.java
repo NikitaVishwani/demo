@@ -114,7 +114,7 @@ import java.util.Map;
                 //String bp_id = service3.getBpId(new_id);
                 EmployeeEntity newA = service3.getById(new_id);
                 newA.setId(tenantId);
-                service3.delete(new_id);
+                service3.delete(approvalEntity);
                 EmployeeEntity updated = service.update(newA);
             }
             return new ResponseEntity<ApprovalEntity>( new HttpHeaders(), HttpStatus.OK);
